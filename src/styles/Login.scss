@@ -1,0 +1,68 @@
+@import "vars";
+.login {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.form-container {
+  display: grid; /*dividir en columnas*/
+  grid-template-rows: auto 1fr auto; /*Grid template filas. Titulo y subtitle toma 1 fraccion y auto final tendrá el espacio que sobra*/
+  width: 300px; /*porque éste no ocupa todo el ancho*/
+}
+.logo {
+  width: 150px;
+  margin-bottom: 50px;
+  justify-self: center;
+  display: none;
+}
+.title {
+  font-size: var(--lg);
+  margin-bottom: 12px;
+  text-align: center;
+}
+.subtitle {
+  color: var(--very-light-pink);
+  font-size: var(--md);
+  font-weight: 300;
+  margin-top: 0;
+  margin-bottom: 32px;
+}
+.form {
+  display: flex; /*ubica uno al lado del otro*/
+  flex-direction: column; /*posicionar en columnas*/
+}
+.label {
+  font-size: var(--sm);
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.input {
+  background-color: var(--text-input-field);
+  border: none;
+  border-radius: 8px;
+  height: 32px;
+  font-size: var(--md);
+  padding: 8px;
+  margin-bottom: 12px;
+}
+.primary-button {
+  background-color: var(--hospital-green);
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  width: 100%;
+  cursor: pointer;
+  font-size: var(--md);
+  font-weight: bold;
+  height: 50px;
+}
+.login-button {
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+@media (max-width: 640px) {
+  .logo {
+    display: block;
+  }
+}
